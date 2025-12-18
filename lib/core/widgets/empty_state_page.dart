@@ -1,6 +1,6 @@
-// lib/presentation/empty_state/view/empty_state_view.dart
+
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import '../../../core/theme/app_colors.dart';
 
 class EmptyStateView extends StatelessWidget {
