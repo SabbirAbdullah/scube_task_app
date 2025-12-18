@@ -15,23 +15,6 @@ The app is built based on the provided Figma design & prototype, implementing al
 
 ---
 
-## 📁 Project Structure
-lib/
-├── main.dart
-├── core/
-│ ├── constants/ # colors, strings, font sizes
-│ ├── theme/ # helpers, extensions, util functions
-│ └── services/ # services like navigation, storage, etc.
-├── data
-   ├── models/# data classes / response models
-   ├──remote/  # api handle
-   ├── repository/ # data/repo logic if needed
-   
-├── Presentation 
-  ├──  viewmodels/ # view model classes (business logic)
-├ ├── views/
-│    ├── screens/ # screen files
-│    └── widgets/ # reusable widgets
-├── routes/ # app navigation/routes
-└── resources/ # images, fonts, assets
+## 📁 Flutter Getx -  (MVVM Architecture)
+
 
