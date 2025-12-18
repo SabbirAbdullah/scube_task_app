@@ -25,10 +25,20 @@ class GaugePainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round;
 
-    canvas.drawArc(Rect.fromCircle(center: center, radius: radius),
-        pi * 0.75, pi * 1.5, false, bg);
-    canvas.drawArc(Rect.fromCircle(center: center, radius: radius),
-        pi * 0.75, pi * 1.5 * progress, false, fg);
+    canvas.drawArc(
+      Rect.fromCircle(center: center, radius: radius),
+      pi * 0.75,
+      pi * 1.5,
+      false,
+      bg,
+    );
+    canvas.drawArc(
+      Rect.fromCircle(center: center, radius: radius),
+      pi * 0.75,
+      pi * 1.5 * progress,
+      false,
+      fg,
+    );
   }
 
   @override

@@ -13,27 +13,21 @@ class AppPages {
   static const ENERGY = '/energy';
   static final routes = [
     GetPage(
-      name: LOGIN,
-      page: () => LoginPage(),
-      binding: LoginBinding(),
+        name: LOGIN,
+        page: () => LoginPage(),
+        binding: LoginBinding()
     ),
-
-  GetPage(
-  name: DASHBOARD,
-  page: () => DashboardPage(),
-  binding: DashboardBinding(),
-  ),
 
     GetPage(
-      name: ENERGY,
-      page: () => ScmDataView(),
-      binding: SCMBinding(),
+      name: DASHBOARD,
+      page: () => DashboardPage(),
+      binding: DashboardBinding(),
     ),
 
-
-
-
-
+    GetPage(
+        name: ENERGY,
+        page: () => ScmDataView(),
+        binding: SCMBinding()
+    ),
   ];
 }
-

@@ -70,7 +70,10 @@ class ScmDataView extends StatelessWidget {
     return Column(
       children: [
         const SizedBox(height: 24),
-        Obx(() => _gauge(isTablet, controller.gaugeValue, controller.gaugeProgress)),
+        Obx(
+          () =>
+              _gauge(isTablet, controller.gaugeValue, controller.gaugeProgress),
+        ),
         const SizedBox(height: 24),
         _dateToggle(),
         const SizedBox(height: 12),
@@ -107,8 +110,13 @@ class ScmDataView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(controller.revenueValue.toString(),
-                  style: const TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
+              Text(
+                controller.revenueValue.toString(),
+                style: const TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               const SizedBox(height: 4),
               const Text("tk", style: TextStyle(fontSize: 16)),
             ],
@@ -133,13 +141,17 @@ class ScmDataView extends StatelessWidget {
             InkWell(
               onTap: controller.toggleExpand,
               child: Row(
-
                 children: [
                   const Icon(Icons.bar_chart, color: AppColors.textGrey),
                   const SizedBox(width: 8),
                   const Expanded(
-                    child: Text("Data & Cost Info",
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
+                    child: Text(
+                      "Data & Cost Info",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
                   CircleAvatar(
                     backgroundColor: AppColors.primaryColor,
@@ -183,8 +195,17 @@ class ScmDataView extends StatelessWidget {
       text: TextSpan(
         style: const TextStyle(fontSize: 16),
         children: [
-          TextSpan(text: "$label : ", style: const TextStyle(color: AppColors.textGrey)),
-          TextSpan(text: value, style: const TextStyle(color: AppColors.textDark, fontWeight: FontWeight.w600)),
+          TextSpan(
+            text: "$label : ",
+            style: const TextStyle(color: AppColors.textGrey),
+          ),
+          TextSpan(
+            text: value,
+            style: const TextStyle(
+              color: AppColors.textDark,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ],
       ),
     );
@@ -194,7 +215,7 @@ class ScmDataView extends StatelessWidget {
   Widget _viewToggle() {
     final views = ['Data View', 'Revenue View'];
     return Obx(
-          () => Container(
+      () => Container(
         margin: const EdgeInsets.all(24),
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
@@ -211,14 +232,25 @@ class ScmDataView extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(selected ? Icons.radio_button_checked : Icons.radio_button_off,
-                        color: selected ? AppColors.primaryColor : AppColors.textGrey),
+                    Icon(
+                      selected
+                          ? Icons.radio_button_checked
+                          : Icons.radio_button_off,
+                      color: selected
+                          ? AppColors.primaryColor
+                          : AppColors.textGrey,
+                    ),
                     const SizedBox(width: 8),
-                    Text(e,
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: selected ? AppColors.primaryColor : AppColors.textGrey)),
+                    Text(
+                      e,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: selected
+                            ? AppColors.primaryColor
+                            : AppColors.textGrey,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -242,7 +274,13 @@ class ScmDataView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(value.toStringAsFixed(0), style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+              Text(
+                value.toStringAsFixed(0),
+                style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               const Text("kWh/Sqft", style: TextStyle(fontSize: 14)),
             ],
           ),
@@ -255,12 +293,16 @@ class ScmDataView extends StatelessWidget {
   Widget _dateToggle() {
     final labels = ['Today Data', 'Custom Date Data'];
     return Obx(
-          () => Row(
+      () => Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: labels.map((label) => Padding(
-          padding: const EdgeInsets.only(right: 24),
-          child: _radio(label),
-        )).toList(),
+        children: labels
+            .map(
+              (label) => Padding(
+                padding: const EdgeInsets.only(right: 24),
+                child: _radio(label),
+              ),
+            )
+            .toList(),
       ),
     );
   }
@@ -271,10 +313,18 @@ class ScmDataView extends StatelessWidget {
       onTap: () => controller.switchDate(label.split(' ')[0]),
       child: Row(
         children: [
-          Icon(selected ? Icons.radio_button_checked : Icons.radio_button_off,
-              color: selected ? AppColors.primaryColor : AppColors.textGrey),
+          Icon(
+            selected ? Icons.radio_button_checked : Icons.radio_button_off,
+            color: selected ? AppColors.primaryColor : AppColors.textGrey,
+          ),
           const SizedBox(width: 8),
-          Text(label, style: TextStyle(color: selected ? AppColors.primaryColor : AppColors.textGrey, fontSize: 14)),
+          Text(
+            label,
+            style: TextStyle(
+              color: selected ? AppColors.primaryColor : AppColors.textGrey,
+              fontSize: 14,
+            ),
+          ),
         ],
       ),
     );
@@ -293,7 +343,7 @@ class ScmDataView extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6),
             color: Color(0xFFE2EBF1),
-            border: Border.all(color: AppColors.primaryColor,),
+            border: Border.all(color: AppColors.primaryColor),
           ),
           child: const Icon(Icons.search, color: AppColors.primaryColor),
         ),
@@ -311,7 +361,10 @@ class ScmDataView extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title, style: const TextStyle(fontSize: 16,color: Colors.black45)),
+          Text(
+            title,
+            style: const TextStyle(fontSize: 16, color: Colors.black45),
+          ),
           const Icon(Icons.calendar_today_outlined),
         ],
       ),
@@ -332,8 +385,20 @@ class ScmDataView extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text(title, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
-              Text(value, style: const TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
+              Text(
+                title,
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              Text(
+                value,
+                style: const TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 16),
@@ -359,12 +424,29 @@ class ScmDataView extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(width: 10, height: 10, decoration: BoxDecoration(color: Color(e['color']), shape: BoxShape.circle)),
+                Container(
+                  width: 10,
+                  height: 10,
+                  decoration: BoxDecoration(
+                    color: Color(e['color']),
+                    shape: BoxShape.circle,
+                  ),
+                ),
                 const SizedBox(height: 6),
-                Text(e['label'], style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600)),
+                Text(
+                  e['label'],
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ],
             ),
-            const VerticalDivider(color: AppColors.border, thickness: 1, width: 20),
+            const VerticalDivider(
+              color: AppColors.border,
+              thickness: 1,
+              width: 20,
+            ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -382,4 +464,3 @@ class ScmDataView extends StatelessWidget {
     );
   }
 }
-

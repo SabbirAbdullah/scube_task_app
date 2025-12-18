@@ -54,7 +54,6 @@ class EmptyStateView extends StatelessWidget {
           height: isTablet ? size.height * 0.7 : size.height * 0.85,
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 24),
           decoration: BoxDecoration(
-
             color: Colors.white,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: AppColors.borderColor),

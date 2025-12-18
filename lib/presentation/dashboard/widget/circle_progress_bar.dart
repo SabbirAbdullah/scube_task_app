@@ -1,4 +1,3 @@
-
 // Custom Painter for Circular Progress
 import 'dart:math' as math;
 
