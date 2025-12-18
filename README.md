@@ -1,16 +1,19 @@
-# scube_task_app
+# Scube Task App
 
-A new Flutter project.
+This is the **Flutter Developer Assessment Submission** for the Flutter Developer role at **Scube Technologies Ltd.**
 
-## Getting Started
+The app is built based on the provided Figma design & prototype, implementing all required screens and UI elements.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 📌 Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+✨ Screens implemented based on Figma design  
+📱 Responsive UI for both Android & iOS  
+🧠 Clean and structured code  
+📂 Well organized project structure
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 📁 Project Structure
+
